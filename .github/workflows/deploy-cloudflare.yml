@@ -52,10 +52,10 @@ jobs:
           if [ -n "$INPUT_VERSION" ]; then
             TAG="$INPUT_VERSION"
           else
-            TAG=$(gh api repos/saltbo/zpan/releases/latest --jq '.tag_name')
+            TAG=$(gh api repos/${{ github.repository }}/releases/latest --jq '.tag_name')
           fi
           if [ -z "$TAG" ]; then
-            echo "::error::No release found in saltbo/zpan"
+            echo "::error::No release found in ${{ github.repository }}"
             exit 1
           fi
           echo "version=$TAG" >> "$GITHUB_OUTPUT"
