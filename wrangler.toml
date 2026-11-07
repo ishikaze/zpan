@@ -27,7 +27,7 @@ database_id = "5bd64957-fa49-4da0-8b7b-6e0ad84037e7"
 migrations_dir = "./migrations"
 
 [[kv_namespaces]]
-binding = "zpan_kv"
+binding = "CACHE_KV"
 id = "42c6f950d90d42c683049f1723ee054f"
 
 [[ratelimits]]
